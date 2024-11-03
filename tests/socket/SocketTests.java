@@ -34,9 +34,8 @@ class SocketTest {
     //Basically was das TestPeer gemacht hat
     @Test
     void testServerSocketIncrementResponse() {
-        try {
-            ServerSocket srvSocket = new ServerSocket(7777);
-            Socket clientSocket = srvSocket.accept();
+        try (ServerSocket srvSocket = new ServerSocket(7777);
+             Socket clientSocket = srvSocket.accept();) {
 
             InputStream inputStream = clientSocket.getInputStream();
             OutputStream outputStream = clientSocket.getOutputStream();
@@ -51,6 +50,5 @@ class SocketTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
     }
 }
