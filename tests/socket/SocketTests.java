@@ -10,7 +10,7 @@ import java.net.Socket;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SocketTest {
+class SocketTests {
 
     @Test
     void testSocketConnection() {
