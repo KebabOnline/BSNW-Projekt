@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="small fix">
-      <change afterPath="$PROJECT_DIR$/src/tcp/ConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/tcp/testConnectionFactory.java" afterDir="false" />
+    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 2 aufgabe 1">
+      <change afterPath="$PROJECT_DIR$/src/tcp/ConnectionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tcp/EchoProtocol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/socket/SocketTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/socket/SocketTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,6 +55,8 @@
     "JUnit.SocketTest.executor": "Run",
     "JUnit.SocketTest.testServerSocketIncrementResponse.executor": "Run",
     "JUnit.SocketTest.testSocketConnection.executor": "Run",
+    "JUnit.SocketTests.testServerSocketIncrementResponse.executor": "Run",
+    "JUnit.SocketTests.testSocketConnection.executor": "Run",
     "JUnit.testConnectionFactory.executor": "Run",
     "JUnit.testConnectionFactory.testConnectionFactory.executor": "Run",
     "JUnit.testConnectionFactory.testConnectionFactoryClient.executor": "Run",
@@ -206,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730592619765</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="schritt 2 aufgabe 1">
+      <option name="closed" value="true" />
+      <created>1730594840202</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730594840202</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +235,7 @@
     <MESSAGE value="schritt 1 video 1" />
     <MESSAGE value="schritt 1 video 5" />
     <MESSAGE value="small fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="small fix" />
+    <MESSAGE value="schritt 2 aufgabe 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="schritt 2 aufgabe 1" />
   </component>
 </project>
