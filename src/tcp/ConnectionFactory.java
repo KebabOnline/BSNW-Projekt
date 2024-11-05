@@ -7,14 +7,20 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ConnectionFactory {
+    public static final int DEFAULT_PORT = 7777;
     private int port;
 
     public ConnectionFactory(int port){
         this.port = port;
     }
 
+    // Falls es ohne Port aufgerufen wird.
+    public ConnectionFactory(){
+        this.port = DEFAULT_PORT;
+    }
+
     public void acceptNewConnections() {
-        try (ServerSocket srvSocket = new ServerSocket(7777);
+        try (ServerSocket srvSocket = new ServerSocket(this.port);
              Socket newConnection = srvSocket.accept()) {
 
             handleConnection(newConnection);
