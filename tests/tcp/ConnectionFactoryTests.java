@@ -1,5 +1,6 @@
 package tcp;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -10,26 +11,30 @@ import java.net.Socket;
 public class ConnectionFactoryTests
 {
     @Test
-    public void testConnectionFactory() throws IOException {
-        ConnectionFactory connectionFactory = new ConnectionFactory(7777);
+    public void runEchoServer() throws IOException {
+        ConnectionFactory connectionFactory = new ConnectionFactory(new EchoServer());
         System.out.println("test: going to accept new connections");
         connectionFactory.acceptNewConnections();
         // stopped hier. Läuft weiter, wenn man z.B. TCPTests.openSocketWriteAndRead() gleichzeitig ausführt
     }
 
     @Test
-    public void testConnectionFactoryClient() throws IOException {
+    public void testEchoServer() throws IOException {
+        //Verbinden
         Socket socket = new Socket("localhost", 7777);
-
-        //Byte vom Server lesen
-        InputStream inStream = socket.getInputStream();
-        int receivedByte = inStream.read();
-        System.out.println("recieved "+ receivedByte);
+        byte byte2Sent = 42;
 
         //Byte zum Server senden
-        OutputStream outStream = socket.getOutputStream();
-        outStream.write(receivedByte);
-        System.out.println("sent "+ receivedByte);
+        socket.getOutputStream().write(byte2Sent);
+        System.out.println("sent "+ byte2Sent);
+
+        //Byte vom Server lesen
+        int readValue = socket.getInputStream().read();
+        System.out.println("read: "+ readValue);
+        //Zu Byte Konvertieren
+        byte readByte = (byte) readValue;
+
+        Assertions.assertEquals(byte2Sent, readByte);
 
     }
 }

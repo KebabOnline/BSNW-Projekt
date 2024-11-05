@@ -9,26 +9,35 @@ import java.net.Socket;
 public class ConnectionFactory {
     public static final int DEFAULT_PORT = 7777;
     private int port;
+    private final ConnectionHandler connectionHandler;
 
-    public ConnectionFactory(int port){
+    public ConnectionFactory(int port, ConnectionHandler connectionHandler){
         this.port = port;
+        this.connectionHandler = connectionHandler;
     }
 
     // Falls es ohne Port aufgerufen wird.
-    public ConnectionFactory(){
+    public ConnectionFactory(ConnectionHandler connectionHandler){
+        this.connectionHandler = connectionHandler;
         this.port = DEFAULT_PORT;
     }
+
+    //
 
     public void acceptNewConnections() {
         try (ServerSocket srvSocket = new ServerSocket(this.port);
              Socket newConnection = srvSocket.accept()) {
 
-            handleConnection(newConnection);
+            //Protocol Engine übernimmt hier
+            this.connectionHandler.handleConnection(newConnection.getInputStream(), newConnection.getOutputStream());
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
+
+    /*
     public void handleConnection(Socket newConnection) {
         try (OutputStream outputStream = newConnection.getOutputStream();
              InputStream inputStream = newConnection.getInputStream()) {
@@ -45,6 +54,8 @@ public class ConnectionFactory {
             throw new RuntimeException(e);
         }
     }
+
+     */
 
 
 }
