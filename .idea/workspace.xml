@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 2 aufgabe 1">
-      <change afterPath="$PROJECT_DIR$/src/tcp/ConnectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/EchoProtocol.java" afterDir="false" />
+    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 2 aufgabe 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tcp/testConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tcp/ConnectionFactoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +49,8 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ConnectionFactoryTests.testConnectionFactory.executor": "Run",
+    "JUnit.ConnectionFactoryTests.testConnectionFactoryClient.executor": "Run",
     "JUnit.FileStreamTests.executor": "Run",
     "JUnit.FileStreamTests.writeAndRead.executor": "Debug",
     "JUnit.SocketTest.executor": "Run",
@@ -76,7 +77,39 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SocketTests.testSocketConnection">
+  <component name="RunManager" selected="JUnit.ConnectionFactoryTests.testConnectionFactoryClient">
+    <configuration name="ConnectionFactoryTests.testConnectionFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tcp" />
+      <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
+      <option name="METHOD_NAME" value="testConnectionFactory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectionFactoryTests.testConnectionFactoryClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tcp" />
+      <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
+      <option name="METHOD_NAME" value="testConnectionFactoryClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SocketTest.testSocketConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BSNW Projekt" />
       <extension name="coverage">
@@ -125,44 +158,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testConnectionFactory.testConnectionFactory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BSNW Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tcp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tcp" />
-      <option name="MAIN_CLASS_NAME" value="tcp.testConnectionFactory" />
-      <option name="METHOD_NAME" value="testConnectionFactory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testConnectionFactory.testConnectionFactoryClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BSNW Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tcp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tcp" />
-      <option name="MAIN_CLASS_NAME" value="tcp.testConnectionFactory" />
-      <option name="METHOD_NAME" value="testConnectionFactoryClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConnectionFactoryTests.testConnectionFactoryClient" />
+        <item itemvalue="JUnit.ConnectionFactoryTests.testConnectionFactory" />
         <item itemvalue="JUnit.SocketTests.testSocketConnection" />
         <item itemvalue="JUnit.SocketTests.testServerSocketIncrementResponse" />
-        <item itemvalue="JUnit.testConnectionFactory.testConnectionFactoryClient" />
-        <item itemvalue="JUnit.testConnectionFactory.testConnectionFactory" />
         <item itemvalue="JUnit.SocketTest.testSocketConnection" />
       </list>
     </recent_temporary>
@@ -216,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730594840202</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="schritt 2 aufgabe 2">
+      <option name="closed" value="true" />
+      <created>1730596365497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730596365497</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,6 +245,7 @@
     <MESSAGE value="schritt 1 video 5" />
     <MESSAGE value="small fix" />
     <MESSAGE value="schritt 2 aufgabe 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="schritt 2 aufgabe 1" />
+    <MESSAGE value="schritt 2 aufgabe 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="schritt 2 aufgabe 2" />
   </component>
 </project>
