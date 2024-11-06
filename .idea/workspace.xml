@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 2 aufgabe 2 fix 2&#10;&#10;fixed port in ConnectionFactory">
+    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="echo server fix?">
+      <change afterPath="$PROJECT_DIR$/src/tcp/IncrementServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tcp/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tcp/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tcp/EchoProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tcp/EchoServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/tcp/ConnectionFactoryTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tcp/ConnectionFactoryTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,8 +51,11 @@
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.ConnectionFactoryTests.runEchoServer.executor": "Run",
+    "JUnit.ConnectionFactoryTests.runIncrementClient.executor": "Run",
+    "JUnit.ConnectionFactoryTests.runIncrementServer.executor": "Run",
     "JUnit.ConnectionFactoryTests.testConnectionFactory.executor": "Run",
     "JUnit.ConnectionFactoryTests.testConnectionFactoryClient.executor": "Run",
+    "JUnit.ConnectionFactoryTests.testEchoServer.executor": "Run",
     "JUnit.FileStreamTests.executor": "Run",
     "JUnit.FileStreamTests.writeAndRead.executor": "Debug",
     "JUnit.SocketTest.executor": "Run",
@@ -79,7 +81,7 @@
     "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.ConnectionFactoryTests.testEchoServer">
+  <component name="RunManager" selected="JUnit.ConnectionFactoryTests.runIncrementClient">
     <configuration name="ConnectionFactoryTests.runEchoServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BSNW Projekt" />
       <extension name="coverage">
@@ -96,6 +98,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConnectionFactoryTests.runIncrementClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tcp" />
+      <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
+      <option name="METHOD_NAME" value="runIncrementClient" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectionFactoryTests.runIncrementServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tcp" />
+      <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
+      <option name="METHOD_NAME" value="runIncrementServer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConnectionFactoryTests.testEchoServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BSNW Projekt" />
       <extension name="coverage">
@@ -107,38 +141,6 @@
       <option name="PACKAGE_NAME" value="tcp" />
       <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
       <option name="METHOD_NAME" value="testEchoServer" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SocketTest.testSocketConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BSNW Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="socket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="socket" />
-      <option name="MAIN_CLASS_NAME" value="socket.SocketTest" />
-      <option name="METHOD_NAME" value="testSocketConnection" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SocketTests.testServerSocketIncrementResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BSNW Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="socket.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="socket" />
-      <option name="MAIN_CLASS_NAME" value="socket.SocketTests" />
-      <option name="METHOD_NAME" value="testServerSocketIncrementResponse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConnectionFactoryTests.runIncrementClient" />
+        <item itemvalue="JUnit.ConnectionFactoryTests.runIncrementServer" />
         <item itemvalue="JUnit.ConnectionFactoryTests.testEchoServer" />
         <item itemvalue="JUnit.ConnectionFactoryTests.runEchoServer" />
         <item itemvalue="JUnit.SocketTests.testSocketConnection" />
-        <item itemvalue="JUnit.SocketTests.testServerSocketIncrementResponse" />
-        <item itemvalue="JUnit.SocketTest.testSocketConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +245,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730820515693</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="schritt 2 aufgabe 3">
+      <option name="closed" value="true" />
+      <created>1730822997943</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730822997943</updated>
+    </task>
+    <task id="LOCAL-00010" summary="echo server fix?">
+      <option name="closed" value="true" />
+      <created>1730852598289</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730852598289</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +284,8 @@
     <MESSAGE value="schritt 2 aufgabe 2" />
     <MESSAGE value="schritt 2 aufgabe 2 fix 1" />
     <MESSAGE value="schritt 2 aufgabe 2 fix 2&#10;&#10;fixed port in ConnectionFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="schritt 2 aufgabe 2 fix 2&#10;&#10;fixed port in ConnectionFactory" />
+    <MESSAGE value="schritt 2 aufgabe 3" />
+    <MESSAGE value="echo server fix?" />
+    <option name="LAST_COMMIT_MESSAGE" value="echo server fix?" />
   </component>
 </project>
