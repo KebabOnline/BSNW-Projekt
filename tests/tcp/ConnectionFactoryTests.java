@@ -3,9 +3,7 @@ package tcp;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class ConnectionFactoryTests
@@ -68,4 +66,44 @@ public class ConnectionFactoryTests
         Assertions.assertEquals(byte2Sent+19, readValue); //Expected 61 because 62 is only sent not read
 
     }
+
+    @Test
+    public void runReverseEchoServer() throws IOException {
+        ConnectionFactory connectionFactory = new ConnectionFactory(new ReverseEchoServer());
+        System.out.println("test: going to accept new connections");
+        connectionFactory.acceptNewConnections();
+    }
+
+    @Test
+    public void runReverseEchoClient() throws IOException {
+        //Verbinden
+        Socket socket = new Socket("localhost", 7777);
+        DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+        DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+
+        long longValue = 123456L;
+        double doubleValue = 123.456;
+        String stringValue = "aaaAAAAaaAaAaAa";
+
+        //send values
+        dataOutputStream.writeLong(longValue);
+        System.out.println("sent "+ longValue);
+        dataOutputStream.writeDouble(doubleValue);
+        System.out.println("sent "+ doubleValue);
+        dataOutputStream.writeUTF(stringValue);
+        System.out.println("sent "+ stringValue);
+
+        //receive values
+        String receivedString = dataInputStream.readUTF();
+        System.out.println("read: "+ receivedString);
+        double receivedDouble = dataInputStream.readDouble();
+        System.out.println("read: "+ receivedDouble);
+        long receivedLong = dataInputStream.readLong();
+        System.out.println("read: "+ receivedLong);
+
+        Assertions.assertEquals(longValue, receivedLong);
+        Assertions.assertEquals(doubleValue, receivedDouble);
+        Assertions.assertEquals(stringValue, receivedString);
+    }
+
 }
