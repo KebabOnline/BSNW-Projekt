@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 2 aufgabe 5">
-      <change afterPath="$PROJECT_DIR$/src/util/MySerialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/util/SerializerTests.java" afterDir="false" />
+    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 3 aufgabe 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/MySerialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/MySerialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/util/SerializerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/util/SerializerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +62,7 @@
     "JUnit.FileStreamTests.writeAndRead.executor": "Debug",
     "JUnit.SerializerTests.arrayTest.executor": "Run",
     "JUnit.SerializerTests.executor": "Run",
+    "JUnit.SerializerTests.fileTest1.executor": "Run",
     "JUnit.SocketTest.executor": "Run",
     "JUnit.SocketTest.testServerSocketIncrementResponse.executor": "Run",
     "JUnit.SocketTest.testSocketConnection.executor": "Run",
@@ -82,10 +83,10 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SerializerTests.fileTest1">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="BSNW Projekt" />
@@ -104,22 +105,6 @@
       <option name="PACKAGE_NAME" value="tcp" />
       <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
       <option name="METHOD_NAME" value="runReverseEchoClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConnectionFactoryTests.runReverseEchoServer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BSNW Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tcp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tcp" />
-      <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
-      <option name="METHOD_NAME" value="runReverseEchoServer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,13 +141,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SerializerTests.fileTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="util" />
+      <option name="MAIN_CLASS_NAME" value="util.SerializerTests" />
+      <option name="METHOD_NAME" value="fileTest1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SerializerTests.fileTest1" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SerializerTests" />
         <item itemvalue="JUnit.SerializerTests.arrayTest" />
         <item itemvalue="JUnit.ConnectionFactoryTests.runReverseEchoClient" />
-        <item itemvalue="JUnit.ConnectionFactoryTests.runReverseEchoServer" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730896654988</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="schritt 3 aufgabe 1">
+      <option name="closed" value="true" />
+      <created>1732745155372</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732745155372</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,6 +307,7 @@
     <MESSAGE value="echo server fix?" />
     <MESSAGE value="schritt 2 aufgabe 4" />
     <MESSAGE value="schritt 2 aufgabe 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="schritt 2 aufgabe 5" />
+    <MESSAGE value="schritt 3 aufgabe 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="schritt 3 aufgabe 1" />
   </component>
 </project>
