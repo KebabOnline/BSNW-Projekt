@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 3 aufgabe 1">
+    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 3 aufgabe 2">
+      <change afterPath="$PROJECT_DIR$/src/sfs/SimpleFileServerClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/sfs/FileClientTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/MySerialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/MySerialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/util/SerializerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/util/SerializerTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,9 @@
     &quot;accountId&quot;: &quot;2edaca3d-ad59-4bec-8ba9-aa0e7e21ce75&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -58,6 +61,10 @@
     "JUnit.ConnectionFactoryTests.testConnectionFactory.executor": "Run",
     "JUnit.ConnectionFactoryTests.testConnectionFactoryClient.executor": "Run",
     "JUnit.ConnectionFactoryTests.testEchoServer.executor": "Run",
+    "JUnit.FileClientTest.executor": "Run",
+    "JUnit.FileClientTest.testGet.executor": "Run",
+    "JUnit.FileClientTest.testGetFileDoesNotExist.executor": "Run",
+    "JUnit.FileClientTest.testPut.executor": "Run",
     "JUnit.FileStreamTests.executor": "Run",
     "JUnit.FileStreamTests.writeAndRead.executor": "Debug",
     "JUnit.SerializerTests.arrayTest.executor": "Run",
@@ -83,59 +90,68 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.editor"
+    "settings.editor.selected.configurable": "configurable.group.appearance"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SerializerTests.fileTest1">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="BSNW Projekt" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConnectionFactoryTests.runReverseEchoClient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FileClientTest.testGet">
+    <configuration name="FileClientTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BSNW Projekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tcp.*" />
+          <option name="PATTERN" value="sfs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tcp" />
-      <option name="MAIN_CLASS_NAME" value="tcp.ConnectionFactoryTests" />
-      <option name="METHOD_NAME" value="runReverseEchoClient" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SerializerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BSNW Projekt" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.SerializerTests" />
+      <option name="PACKAGE_NAME" value="sfs" />
+      <option name="MAIN_CLASS_NAME" value="sfs.FileClientTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SerializerTests.arrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileClientTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BSNW Projekt" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="util.*" />
+          <option name="PATTERN" value="sfs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="util" />
-      <option name="MAIN_CLASS_NAME" value="util.SerializerTests" />
-      <option name="METHOD_NAME" value="arrayTest" />
+      <option name="PACKAGE_NAME" value="sfs" />
+      <option name="MAIN_CLASS_NAME" value="sfs.FileClientTest" />
+      <option name="METHOD_NAME" value="testGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileClientTest.testGetFileDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sfs" />
+      <option name="MAIN_CLASS_NAME" value="sfs.FileClientTest" />
+      <option name="METHOD_NAME" value="testGetFileDoesNotExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileClientTest.testPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BSNW Projekt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sfs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sfs" />
+      <option name="MAIN_CLASS_NAME" value="sfs.FileClientTest" />
+      <option name="METHOD_NAME" value="testPut" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileClientTest.testGet" />
+        <item itemvalue="JUnit.FileClientTest.testPut" />
+        <item itemvalue="JUnit.FileClientTest.testGetFileDoesNotExist" />
+        <item itemvalue="JUnit.FileClientTest" />
         <item itemvalue="JUnit.SerializerTests.fileTest1" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.SerializerTests" />
-        <item itemvalue="JUnit.SerializerTests.arrayTest" />
-        <item itemvalue="JUnit.ConnectionFactoryTests.runReverseEchoClient" />
       </list>
     </recent_temporary>
   </component>
@@ -280,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732745155372</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="schritt 3 aufgabe 2">
+      <option name="closed" value="true" />
+      <created>1734055864580</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734055864580</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,6 +332,7 @@
     <MESSAGE value="schritt 2 aufgabe 4" />
     <MESSAGE value="schritt 2 aufgabe 5" />
     <MESSAGE value="schritt 3 aufgabe 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="schritt 3 aufgabe 1" />
+    <MESSAGE value="schritt 3 aufgabe 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="schritt 3 aufgabe 2" />
   </component>
 </project>
