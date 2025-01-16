@@ -19,6 +19,7 @@ public class SimpleFileServerClient {
         this.rootDir = rootDir;
         this.inputStream = new DataInputStream(is);
         this.outputStream = new DataOutputStream(os);
+        new File(rootDir).mkdirs(); // If directory doesn't exist
     }
 
     public void getFile(String fileName) throws IOException {
@@ -47,7 +48,7 @@ public class SimpleFileServerClient {
         } else if (responseType == ERROR) {
             int errorCode = inputStream.readInt();
             String errorMessage = inputStream.readUTF();
-            // File doesn't exist or other error - muss nichts mehr machen?
+            throw new IOException("Server error: " + errorMessage + " (code: " + errorCode + ")");
         }
     }
 
