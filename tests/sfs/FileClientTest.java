@@ -3,10 +3,7 @@ package sfs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.Socket;
 
 public class FileClientTest {
@@ -58,6 +55,32 @@ public class FileClientTest {
                 new SimpleFileServerClient(rootDirName, socket.getInputStream(), socket.getOutputStream());
 
         sfsClient.putFile(PUT_FILE_NAME);
+    }
+
+    @Test
+    public void testBeleg() throws IOException {
+        String rootDirName = this.getRootDir();
+
+        Socket socket = new Socket("141.45.154.136", 4444);
+        SimpleFileServerClient sfsClient =
+                new SimpleFileServerClient(rootDirName, socket.getInputStream(), socket.getOutputStream());
+
+        sfsClient.getFile("values.txt");
+        //read long and int from file
+        try (DataInputStream dataInputStream = new DataInputStream(new FileInputStream(rootDirName + "/values.txt"))) {
+            long longValue = dataInputStream.readLong();
+            int intValue = dataInputStream.readInt();
+            System.out.println("Read long: " + longValue);
+            System.out.println("Read int: " + intValue);
+            long result = longValue + intValue;
+            System.out.println("Result: " + result);
+            try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(rootDirName + "/ergebnis.txt"))) {
+                dataOutputStream.writeLong(result);
+                dataOutputStream.writeUTF ("Kerem Gürbüz");
+                dataOutputStream.writeUTF ("587049");
+            }
+            sfsClient.putFile("ergebnis.txt");
+        }
     }
 
     public String getRootDir() {

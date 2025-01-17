@@ -80,5 +80,8 @@ public class SimpleFileServerClient {
             throw new IOException("Server error: " + errorMessage + " (code: " + errorCode + ")");
         }
         // else: OK response - muss nichts mehr machen
+        if (responseType == OK) {
+            System.out.println("Put was successful.");
+        }
     }
 }
