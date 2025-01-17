@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 4 aufgabe 2">
-      <change afterPath="$PROJECT_DIR$/src/sfs/SimpleFileServerCLI.java" afterDir="false" />
+    <list default="true" id="024f90ce-7b95-4915-ad8e-0145d2ebc470" name="Changes" comment="schritt 5 aufgabe 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sfs/SimpleFileServerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sfs/SimpleFileServerClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/sfs/FileClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/sfs/FileClientTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,57 +48,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CLISkeleton.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.SimpleFileServer.executor": "Run",
-    "Application.SimpleFileServerCLI.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.ConnectionFactoryTests.runEchoServer.executor": "Run",
-    "JUnit.ConnectionFactoryTests.runIncrementClient.executor": "Run",
-    "JUnit.ConnectionFactoryTests.runIncrementServer.executor": "Run",
-    "JUnit.ConnectionFactoryTests.runReverseEchoClient.executor": "Run",
-    "JUnit.ConnectionFactoryTests.runReverseEchoServer.executor": "Run",
-    "JUnit.ConnectionFactoryTests.testConnectionFactory.executor": "Run",
-    "JUnit.ConnectionFactoryTests.testConnectionFactoryClient.executor": "Run",
-    "JUnit.ConnectionFactoryTests.testEchoServer.executor": "Run",
-    "JUnit.FileClientTest,testGet and 1 more.executor": "Run",
-    "JUnit.FileClientTest.executor": "Run",
-    "JUnit.FileClientTest.testGet.executor": "Run",
-    "JUnit.FileClientTest.testGetFileDoesNotExist.executor": "Run",
-    "JUnit.FileClientTest.testPut.executor": "Run",
-    "JUnit.FileServerTest.executor": "Run",
-    "JUnit.FileServerTest.testServer.executor": "Run",
-    "JUnit.FileStreamTests.executor": "Run",
-    "JUnit.FileStreamTests.writeAndRead.executor": "Debug",
-    "JUnit.SerializerTests.arrayTest.executor": "Run",
-    "JUnit.SerializerTests.executor": "Run",
-    "JUnit.SerializerTests.fileTest1.executor": "Run",
-    "JUnit.SocketTest.executor": "Run",
-    "JUnit.SocketTest.testServerSocketIncrementResponse.executor": "Run",
-    "JUnit.SocketTest.testSocketConnection.executor": "Run",
-    "JUnit.SocketTests.testServerSocketIncrementResponse.executor": "Run",
-    "JUnit.SocketTests.testSocketConnection.executor": "Run",
-    "JUnit.testConnectionFactory.executor": "Run",
-    "JUnit.testConnectionFactory.testConnectionFactory.executor": "Run",
-    "JUnit.testConnectionFactory.testConnectionFactoryClient.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/merek/OneDrive/Dokumente/- AI Sem 3/B23 Betriebssysteme und Netzwerke",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CLISkeleton.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SimpleFileServer.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SimpleFileServerCLI.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.ConnectionFactoryTests.runEchoServer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.runIncrementClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.runIncrementServer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.runReverseEchoClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.runReverseEchoServer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.testConnectionFactory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.testConnectionFactoryClient.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ConnectionFactoryTests.testEchoServer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileClientTest,testGet and 1 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileClientTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileClientTest.testGet.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileClientTest.testGetFileDoesNotExist.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileClientTest.testPut.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileServerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileServerTest.testServer.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileStreamTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileStreamTests.writeAndRead.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.SerializerTests.arrayTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SerializerTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SerializerTests.fileTest1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SocketTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SocketTest.testServerSocketIncrementResponse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SocketTest.testSocketConnection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SocketTests.testServerSocketIncrementResponse.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SocketTests.testSocketConnection.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.testConnectionFactory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.testConnectionFactory.testConnectionFactory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.testConnectionFactory.testConnectionFactoryClient.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/merek/Code/Java/BSNW Projekt/src/cli&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\merek\Code\Java\BSNW Projekt\src\cli" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\merek\Code\Java\BSNW Projekt\src\cli" />
     </key>
@@ -325,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736991718814</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="schritt 5 aufgabe 3">
+      <option name="closed" value="true" />
+      <created>1737067229024</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1737067229024</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,6 +366,7 @@
     <MESSAGE value="schritt 3 aufgabe 2" />
     <MESSAGE value="schritt 4 aufgabe 1" />
     <MESSAGE value="schritt 4 aufgabe 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="schritt 4 aufgabe 2" />
+    <MESSAGE value="schritt 5 aufgabe 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="schritt 5 aufgabe 3" />
   </component>
 </project>
